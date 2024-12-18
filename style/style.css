@@ -1,15 +1,15 @@
-
+/* Estilos gerais */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, #ffafbd, #ffc3a0);
+    background: radial-gradient(circle, #a5e197, #388879);
     color: #333;
 }
 
-
+/* Cabeçalho */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #a5e197, #388879);
     color: white;
     text-align: center;
     padding: 30px 0;
@@ -35,13 +35,16 @@ header p {
 /* Introdução */
 .introducao {
     padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
     text-align: center;
     background-color: #f8f9fa;
     color: #333;
+    border-radius: 15px;
     font-size: 1.2em;
 }
 
-/*  CONTEUDO PRINCIPAL */
+/* Conteúdo principal */
 main {
     padding: 40px 20px;
     text-align: center;
@@ -50,7 +53,7 @@ main {
 main h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #5a189a;
+    color: #000;
 }
 
 main p {
@@ -84,7 +87,7 @@ main p {
 .card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #ff477e;
+    color: #000;
 }
 
 .card p {
@@ -113,12 +116,15 @@ main p {
 }
 
 
-
+/* Agradecimentos */
 .agradecimentos {
     padding: 20px;
     text-align: center;
-    background-color: #e6eaff;
+    background-color: #ffffff;
     color: #333;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 15px;
 }
 
 .agradecimentos h3 {
@@ -133,7 +139,7 @@ main p {
 
 /* Rodapé */
 footer {
-    background-color: #6a11cb;
+    background-color: #388879;
     color: white;
     text-align: center;
     padding: 20px 0;
