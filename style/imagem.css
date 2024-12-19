@@ -33,10 +33,10 @@ header p {
 /* Galeria */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Apenas uma coluna */
     gap: 2rem;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 600px; /* Centraliza o conteúdo */
     margin: 0 auto;
 }
 
@@ -46,54 +46,45 @@ header p {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-.art-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
     padding: 1rem;
+    text-align: center;
 }
 
-.art-content img {
+.art-piece img {
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.art-content .reconstruction img {
-    width: 80%; /* Reconstrução ocupa mais espaço */
+    width: 100%;
     height: auto;
-    max-width: 500px;
 }
-
-.art-content img:first-child {
-    width: 400%; /* Arte original ocupa menos espaço */
-    height: auto;
-    max-width: 200px;
-}
-
 
 .art-title {
     font-size: 1.8rem;
     font-weight: bold;
-    margin: 1rem;
     text-align: center;
     color: #2c3e50;
+    margin-bottom: 1rem;
 }
 
 .art-description {
-    font-size: 1.1rem;
-    padding: 0 1rem 1rem;
+    font-size: 1rem;
     text-align: center;
     color: #7f8c8d;
+    margin-top: 1rem;
+}
+
+.reconstruction img {
+    width: 100%; /* Ocupa toda a largura do bloco */
+    height: auto;
+    margin-top: 1rem;
 }
 
 .reconstruction h2 {
     font-size: 1.5rem;
+    text-align: center;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
+
+
 
 /* Seção de vídeo */
 .video-section {
