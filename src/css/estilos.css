@@ -1,0 +1,128 @@
+/*Fontes utilizadas no projeto*/
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fontes/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Whisper-Regular;
+  src: url("../fontes/Whisper/Whisper-Regular.ttf");
+}
+
+/*-------------------------------------------------*/
+
+body {
+  font-family: "Poppins-Regular", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*Fixando a imagem e colocando ela na camada -1 para  otexto ficar por cima*/
+.Carrossel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/*Ocultando os items de atributo "informacoes" do carrosel para que só um apareça*/
+.informacoes {
+  display: none;
+}
+
+/*Exibindo apenas o primiero item do carrossel que não precisara de interação apra aparecer no inicio da página*/
+.informacoes.ativa {
+  display: block;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+
+.informacoes h1{
+  font-size: 100px;
+  color: white;
+  margin-bottom: 80px;
+  font-family: Whisper-Regular;
+}
+
+.informacoes .descricao {
+  width: 50%;
+  font-size: 20px;
+  color: white;
+  line-height: 40px;
+  height: 300px;
+
+  /*caso for preciso mais texto, isso fara um scroll indivudual para o texto da descrição sem que o texto fique gigante e feio*/
+  overflow: auto;
+  padding-right: 15px;
+}
+.informacoes iframe {
+  display: block;
+  margin: 0 auto; 
+  margin-bottom: 183px;
+
+}
+
+.botoes-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botoes-carrossel .botao {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-color: white;
+}
+
+.botoes-carrossel .botao.selecionado {
+  background-color: rgb(56, 56, 56);
+}
+
+/*Otimizando a imagem*/
+.imagem {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+}
+
+.imagem.ativa {
+  display: block;
+  animation: mudarImagem 2.5s;
+}
+
+/*Adicionando keyframes de transição*/
+@keyframes mudarImagem {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*Criando um pseudo elemento, um elemento que não existe no código html mas que pode ser inserido na pagina diretamente pelo css*/
+main:after {
+  content: "sombremento";
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.05926120448179273) 60%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  z-index: -1;
+}
