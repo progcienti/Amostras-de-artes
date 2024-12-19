@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
-    color: #333;
+    color:#FFD700;
     line-height: 1.6;
     padding: 0;
     margin: 0;
@@ -15,6 +15,7 @@ body {
 
 header {
     background: linear-gradient(90deg, #495057, #6c757d);
+    font-family: 'Merriweather', serif; /* Fonte principal */
     color: white;
     text-align: center;
     padding: 40px;
@@ -29,6 +30,7 @@ header h1 {
 
 header p {
     font-size: 1.2em;
+    color: black;
     font-style: italic;
 }
 
